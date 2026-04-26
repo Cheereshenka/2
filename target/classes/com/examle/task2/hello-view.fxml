@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="681.0" prefWidth="853.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examle.task2.MainController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox prefHeight="26.0" prefWidth="813.0" spacing="10.0">
+        <children>
+            <TextField fx:id="delayField" prefHeight="24.0" prefWidth="730.0" promptText="Задержка между слайдами, мс" />
+
+            <Button mnemonicParsing="false" onAction="#onDelayApply" text="ОК" />
+        </children>
+    </HBox>
+
+    <HBox prefHeight="50.0" prefWidth="813.0" />
+
+    <StackPane prefHeight="461.0" prefWidth="810.0">
+        <children>
+            <ImageView fx:id="screen" fitHeight="461.0" fitWidth="810.0" pickOnBounds="true" preserveRatio="true" />
+
+            <Label fx:id="impressionOverlay" style="-fx-font-family: 'Segoe UI Emoji'; -fx-font-size: 48px; -fx-background-color: rgba(0,0,0,0.35); -fx-padding: 8 14 8 14; -fx-background-radius: 12;" text="" textFill="WHITE" StackPane.alignment="BOTTOM_CENTER">
+                <StackPane.margin>
+                    <Insets bottom="15.0" right="15.0" />
+                </StackPane.margin>
+            </Label>
+        </children>
+    </StackPane>
+
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="813.0">
+        <children>
+            <ComboBox fx:id="impressionBox" onAction="#onImpressionChanged" prefHeight="25.0" prefWidth="112.0" />
+        </children>
+    </HBox>
+
+    <Label fx:id="progressLabel" alignment="CENTER" prefHeight="24.0" prefWidth="467.0" />
+
+    <HBox alignment="CENTER" prefHeight="67.0" prefWidth="270.0">
+        <children>
+
+            <Button onAction="#onPrevButtonClick" prefHeight="54.0" prefWidth="54.0">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../buttons/back.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <HBox.margin>
+                    <Insets left="10.0" right="10.0" />
+                </HBox.margin>
+            </Button>
+
+            <Button onAction="#onStopAutoClick" prefHeight="54.0" prefWidth="54.0">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../buttons/stop.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <HBox.margin>
+                    <Insets left="10.0" right="10.0" />
+                </HBox.margin>
+            </Button>
+            <Button onAction="#onStartAutoClick" prefHeight="54.0" prefWidth="54.0">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../buttons/start.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <HBox.margin>
+                    <Insets left="10.0" right="10.0" />
+                </HBox.margin>
+            </Button>
+
+            <Button onAction="#onNextButtonClick" prefHeight="54.0" prefWidth="54.0">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../buttons/forward.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <HBox.margin>
+                    <Insets left="10.0" right="10.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+            <Button mnemonicParsing="false" onAction="#onChooseFolderClick" text="Выбрать папку" />
+      </children>
+   </HBox>
+</VBox>
